@@ -6,7 +6,7 @@ CONFIGFOLDER='/root/.profitbase'
 COIN_DAEMON='profitbased'
 COIN_CLI='profitbase-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://github.com/ProfitBaseCoin/Profitbase/releases/download/1.0.0.0/Profitbase-1.0.0.0-daemon_ubuntu_16.04.tar.gz'
+COIN_TGZ='https://github.com/ProfitBaseCoin/Profitbase/releases/download/1.1.0.0/Profitbase-1.1.0.0-daemon_ubuntu_16.04.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='profitbase'
 COIN_PORT=1516
@@ -47,7 +47,7 @@ function download_node() {
   echo -e "${GREEN}Downloading and Installing VPS $COIN_NAME Daemon${NC}"
   cd $TMP_FOLDER >/dev/null 2>&1
   wget -q $COIN_TGZ
-  tar xzvf Profitbase-1.0.0.0-daemon_ubuntu_16.04.tar.gz
+  tar xzvf Profitbase-1.1.0.0-daemon_ubuntu_16.04.tar.gz
   cd rev >/dev/null 2>&1
   chmod +x $COIN_DAEMON $COIN_CLI
   cp $COIN_DAEMON $COIN_CLI $COIN_PATH
